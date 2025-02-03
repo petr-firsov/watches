@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root {
+  margin: 0 auto;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-watch-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-watch-input {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  margin-right: 50px;
+}
+
+.watch-block {
+  display: flex;
+  padding-top: 20px;
+}
+
+.watch {
+  margin-right: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.watch-name {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+
+  font-weight: bold;
+}
+
+.remove-btn {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  border: 1px solid grey;
+  color: grey;
+}
+
+.time {
+  display: flex;
+}
