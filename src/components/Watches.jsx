@@ -31,6 +31,6 @@ export default function Watches({watches, setWatches}) {
 }
 
 Watches.propTypes = {
-    watches: PropTypes.string,
-    setWatches: PropTypes.string,
+    watches: PropTypes.array,
+    setWatches: PropTypes.func,
 }

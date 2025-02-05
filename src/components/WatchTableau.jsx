@@ -9,10 +9,13 @@ export default function WatchTableau() {
         const newWatchName = e.target.elements['add-watch-name'];
         const newWatchTimezone = e.target.elements['add-time-zone'];
         if (newWatchName.value === '' || newWatchTimezone.value === '') {
-            return
-        }
-        if (newWatchTimezone.value.match(/^[+-]\d/) || newWatchTimezone.value === '0') {
-            e.preventDefault();
+            alert('Ошибка! Значения не введены') 
+        } 
+        
+        if (newWatchTimezone.value.match(/[^+-\d]/g)) {
+            alert('Неверный формат временной зоны')
+        } else if (newWatchTimezone.value === '0' || newWatchTimezone.value.match(/^[+-\d]/)) {
+            e.preventDefault();     
             const newWatch = {
                 watchName: newWatchName.value,
                 watchTimezone: newWatchTimezone.value
@@ -22,8 +25,7 @@ export default function WatchTableau() {
             newWatchTimezone.value = '';
         }
     }
-
-
+    
     return (
         <div className="watch-tableau">
             <AddWatchForm handleSubmit={handleSubmit} />
