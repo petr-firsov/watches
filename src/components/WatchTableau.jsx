@@ -12,9 +12,9 @@ export default function WatchTableau() {
             alert('Ошибка! Значения не введены') 
         } 
         
-        if (newWatchTimezone.value.match(/[^+-\d]/g)) {
-            alert('Неверный формат временной зоны')
-        } else if (newWatchTimezone.value === '0' || newWatchTimezone.value.match(/^[+-\d]/)) {
+        if (newWatchTimezone.value.match( /[^+-\d]/g ) || (!newWatchTimezone.value.match( /^[+-]\d/ ) ) ) {
+            alert('Неверный формат временной зоны');
+        } else if (newWatchTimezone.value.match(/^[+-\d]/)) {
             e.preventDefault();     
             const newWatch = {
                 watchName: newWatchName.value,
